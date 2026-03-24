@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* FuelNature Brand Colors */
+    /* Background: warm off-white #F3F1E6 → oklch(0.948 0.014 87) */
+    --background: 0.948 0.014 87;
+    /* Foreground: near-black #1E1E1E */
+    --foreground: 0.18 0 0;
+    /* Card: warm cream #F7F4E6 */
+    --card: 0.965 0.012 87;
+    --card-foreground: 0.18 0 0;
+    --popover: 0.965 0.012 87;
+    --popover-foreground: 0.18 0 0;
+    /* Primary: sage green #8FA07A */
+    --primary: 0.65 0.07 135;
+    --primary-foreground: 0.985 0 0;
+    /* Secondary: deeper green #7E8F66 */
+    --secondary: 0.59 0.08 135;
+    --secondary-foreground: 0.985 0 0;
+    /* Muted: light parchment */
+    --muted: 0.93 0.01 87;
+    --muted-foreground: 0.42 0 0;
+    /* Accent: orange #D2833E */
+    --accent: 0.65 0.14 52;
+    --accent-foreground: 0.985 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    /* Border: light tan #D8D4C4 */
+    --border: 0.85 0.012 80;
+    --input: 0.85 0.012 80;
+    --ring: 0.65 0.07 135;
+
+    /* Custom brand tokens */
+    --brand-green: 0.65 0.07 135;
+    --brand-green-deep: 0.59 0.08 135;
+    --brand-orange: 0.65 0.14 52;
+    --brand-peach: 0.82 0.08 60;
+    --brand-parchment: 0.948 0.014 87;
+    --brand-cream: 0.965 0.012 87;
+    --brand-footer-bg: 0.26 0.01 200;
+    --brand-footer-text: 0.935 0.01 87;
+
+    /* Elite / Gold tokens */
+    --elite-gold: 0.78 0.14 82;
+    --elite-gold-deep: 0.65 0.16 72;
+    --elite-gold-muted: 0.55 0.1 78;
+    --elite-bg: 0.14 0.01 240;
+    --elite-card: 0.19 0.015 250;
+    --elite-border: 0.78 0.14 82;
+    --elite-text: 0.93 0.012 87;
+    --elite-text-muted: 0.72 0.02 80;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.965 0.012 87;
+    --sidebar-foreground: 0.18 0 0;
+    --sidebar-primary: 0.65 0.07 135;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.93 0.01 87;
+    --sidebar-accent-foreground: 0.18 0 0;
+    --sidebar-border: 0.85 0.012 80;
+    --sidebar-ring: 0.65 0.07 135;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .elite-glow {
+    box-shadow: 0 0 20px oklch(0.78 0.14 82 / 0.2), 0 0 40px
+      oklch(0.78 0.14 82 / 0.08);
+  }
+
+  .elite-glow-sm {
+    box-shadow: 0 0 10px oklch(0.78 0.14 82 / 0.25);
+  }
+
+  .zone-live-glow {
+    box-shadow: 0 0 12px oklch(0.65 0.14 52 / 0.3);
+  }
+}
